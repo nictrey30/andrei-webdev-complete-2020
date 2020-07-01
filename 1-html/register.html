@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register form</title>
+  <style>
+    form input,
+    form select {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Register</h1>
+  </header>
+  <nav>
+    <a href="http://www.google.com" target="_blank">google</a>
+  </nav>
+  <form action="" method="GET">
+    <label for="firstname">First name: </label>
+    <input type="text" id="firstname" name="firstname" placeholder="first name"><br>
+    <label for="lastname">Last name: </label>
+    <input type="text" id="lastname" name="lastname" placeholder="last name"><br>
+    <label for="email">Email: </label>
+    <input type="email" id="email" name="email" placeholder="email" required minlength="8"><br>
+    <!-- Attribute Description
+    maxlength - The maximum length the value may be, in UTF-16 characters
+    minlength - The minimum length in characters that will be considered valid
+    pattern - A regular expression the value must match in order to be valid
+    readonly - A Boolean attribute which, if present, indicates that the field's contents should not be editable
+    size - The number of characters wide the input field should be -->
+    <label for="pass">Password: </label>
+    <input type="password" id="pass" name="password" placeholder="password" required><br>
+    <label for="bday">Birthday: </label>
+    <input type="date" name="bday" id="bday"><br>
+    Gender:
+    <input type="radio" name="gender" id="male" value="male">
+    <label for="male">male</label>
+    <input type="radio" name="gender" id="female" value="female">
+    <label for="female">female</label><br>
+    Pets:
+    <input type="checkbox" name="cats" id="cats">
+    <label for="cats">cats</label>
+    <input type="checkbox" name="dogs" id="dogs">
+    <label for="dogs">dogs</label><br>
+    <label for="cars">Cars: </label>
+    <select name="cars" id="cars">
+      <optgroup label="Swedish Cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+      </optgroup>
+      <optgroup label="German Cars">
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </optgroup>
+    </select><br>
+    <button type="submit">register</button>
+    <button type="reset">reset</button>
+  </form>
+  <footer>
+    <p>website made with love</p>
+  </footer>
+</body>
+
+</html>

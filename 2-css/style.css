@@ -1,0 +1,44 @@
+/* body {
+  background-image: url(painting.jpg);
+  background-size: cover;
+} */
+
+h2 {
+  color: crimson;
+  text-align: center;
+  border: 1px dashed grey;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  text-align: center;
+  color: green;
+}
+
+.webtext {
+  border: 5px dashed green;
+}
+
+.active {
+  color: red;
+}
+
+#div1 {
+  background-color: rgba(0, 0, 255, 0.3);
+}
+
+.boxmodel {
+  border: 2px solid red;
+  display: inline-block;
+  padding: 5px 20px;
+  margin-right: 20px;
+}
