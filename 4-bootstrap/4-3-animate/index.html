@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Animate.CSS</title>
+</head>
+
+<body>
+  <div class="header">
+    <h1>An animated element</h1>
+  </div>
+  <script>
+    const h1 = document.querySelector('h1');
+    const superToggle = (element, ...args) => args.forEach(el => element.classList.toggle(el));
+    h1.addEventListener('mouseover', () =>
+      superToggle(h1, 'animate__animated', 'animate__bounce')
+    )
+  </script>
+</body>
+
+</html>
