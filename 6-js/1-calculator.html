@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    .container {
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    #num1,
+    #num2 {
+      margin-bottom: 15px;
+      margin-right: 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <button id="num1">num1:</button><span id="num1Display"></span><br>
+    <button id="num2">num2:</button><span id="num2Display"></span>
+    <hr>
+    <ul>
+      <li><button id="add">add</button></li>
+      <li><button id="diff">diff</button></li>
+      <li><button id="multiply">multiply</button></li>
+      <li><button id="divide">divide</button></li>
+    </ul>
+    <hr>
+    <p>result: <span id="result"></span></p>
+  </div>
+  <script src="1-calculator.js"></script>
+</body>
+
+</html>
