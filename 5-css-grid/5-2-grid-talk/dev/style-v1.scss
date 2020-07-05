@@ -1,0 +1,58 @@
+// Grid container - any container in a document that you create a grid inside
+// Grid item - any direct descendant of a grid container
+// Grid line - any line that you draw inside the grid on X or Y axis, and they are referenced by number, starting and ending with the outer borders of the grid.
+// Grid cell - The intersection between a grid-row and a grid-column. Effectively the same as table cell.
+// Grid track - either a horizontal or vertical track. Effectively a full row or a column
+// Grid area - rectangular area between four specified grid lines. Grid areas can cover one or more cells.
+// Grid gap - the space between each of the cells
+
+// CSS Grind in a nutshell:
+// 1. Define a grid
+// 2. Place items in that grid where you want them to appear
+
+// grid items automatically populate grid from top left to bottom right based on HTML source order
+body {
+  color: white;
+  box-sizing: border-box;
+}
+.site {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto 1fr 3fr;
+}
+.masthead,
+.main-content,
+.sidebar,
+.footer {
+  padding: 0.5rem;
+  margin: 2px;
+}
+.masthead {
+  background-color: blueviolet;
+  grid-column: 2/4;
+  grid-row: 2/3;
+}
+.page-title {
+  background-color: darkblue;
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 0.5rem;
+  margin: 2px;
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+.main-content {
+  background-color: greenyellow;
+  grid-column: 1/2;
+  grid-row: 2/4;
+}
+.sidebar {
+  background-color: orange;
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.footer {
+  background-color: lightblue;
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
