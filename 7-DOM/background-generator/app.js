@@ -27,9 +27,7 @@ const generateRandomColors = () => {
   return color;
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-  changeColors();
-});
+document.addEventListener('DOMContentLoaded', changeColors);
 
 // The input event fires when the value of an <input>, <select>, or <textarea> element has been changed.
 color1.addEventListener('input', changeColors);
