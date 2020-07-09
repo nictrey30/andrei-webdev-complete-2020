@@ -1,0 +1,151 @@
+.zone {
+  cursor: pointer;
+  color: #fff;
+  font-size: 2em;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.zone:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+  -o-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+}
+
+.box:hover {
+  -webkit-transform-: rotate(-5deg);
+  -moz-transform-: rotate(-5deg);
+  -o-transform-: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+
+/*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
+.green {
+  background: #56b870;
+  /* Old browsers */
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: -webkit-gradient(linear, left top, left bottom, from(#56b870), to(#a5c956));
+  background: linear-gradient(top, #56b870 0%, #a5c956 100%);
+  /* W3C */
+}
+
+.red {
+  background: #c655be;
+  /* Old browsers */
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: -webkit-gradient(linear, left top, left bottom, from(#c655be), to(#cf0404));
+  background: linear-gradient(top, #c655be 0%, #cf0404 100%);
+  /* W3C */
+}
+
+.yellow {
+  background: #f3aaaa;
+  /* Old browsers */
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: -webkit-gradient(linear, left top, left bottom, from(#f3aaaa), to(#febf04));
+  background: linear-gradient(top, #f3aaaa 0%, #febf04 100%);
+  /* W3C */
+}
+
+.blue {
+  background: #7abcff;
+  /* Old browsers */
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: -webkit-gradient(linear, left top, left bottom, from(#7abcff), color-stop(44%, #60abf8), to(#4096ee));
+  background: linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%);
+  /* W3C */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  font-size: 0.7em;
+  margin: 0;
+}
+
+.main-nav li {
+  padding: 20px;
+}
+
+.main-nav li a {
+  color: #f5f5f6;
+  text-decoration: none;
+}
+
+.main-nav li.push {
+  margin-left: auto;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50vh;
+}
+
+.container .cover {
+  width: 30rem;
+}
+
+.grid-wrapper {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.grid-wrapper .box {
+  background-color: #444;
+  padding: 130px;
+  margin: 20px;
+}
+
+.grid-wrapper .box img {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+}
