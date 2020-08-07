@@ -1,17 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CardList from './CardList';
-import robots from './robots';
 import SearchBox from './SearchBox';
 import './App.css';
 
 function App() {
-  const [robotsList, setRobotsList] = useState(robots);
+  const [robotsList, setRobotsList] = useState([]);
   const [searchfield, setSearchField] = useState('');
 
-  function onSearchChange(e) {
+  const fetchData = async () => {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const users = await response.json();
+    return users;
+  };
+
+  useEffect(() => {
+    fetchData()
+      .then((users) => setRobotsList(users))
+      .catch((err) => console.log(err));
+  }, []);
+
+  const onSearchChange = (e) => {
     const { value } = e.target;
     setSearchField(value);
-  }
+  };
 
   const filteredRobots = robotsList.filter((robot) =>
     robot.name.toLowerCase().includes(searchfield.toLowerCase())
@@ -19,7 +30,11 @@ function App() {
 
   return (
     <div className='tc'>
-      <h1 className='f1 tracked-mega'>RoboFriends</h1>
+      {robotsList.length === 0 ? (
+        <h1>Loading</h1>
+      ) : (
+        <h1 className='f1 tracked-mega'>RoboFriends</h1>
+      )}
       <SearchBox searchChange={onSearchChange} />
       <CardList robots={filteredRobots} />
     </div>
