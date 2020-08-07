@@ -2,7 +2,7 @@ import React from 'react';
 
 function SearchBox({ searchChange }) {
   return (
-    <div>
+    <div className='fixbar'>
       <input
         className='pa3 ba b--green bg-lightest-blue'
         type='search'

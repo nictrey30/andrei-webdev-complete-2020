@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CardList from './CardList';
+// import Scroll from './Scroll';
 import SearchBox from './SearchBox';
 import './App.css';
 
@@ -36,6 +37,9 @@ function App() {
         <h1 className='f1 tracked-mega'>RoboFriends</h1>
       )}
       <SearchBox searchChange={onSearchChange} />
+      {/* <Scroll>
+        <CardList robots={filteredRobots} />
+      </Scroll> */}
       <CardList robots={filteredRobots} />
     </div>
   );
