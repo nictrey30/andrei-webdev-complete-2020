@@ -3,7 +3,7 @@ import Card from './Card';
 
 function CardList({ robots }) {
   return (
-    <div className='flex flex-wrap justify-start'>
+    <div className='flex flex-start flex-wrap'>
       {robots.map((robot) => {
         return (
           <Card

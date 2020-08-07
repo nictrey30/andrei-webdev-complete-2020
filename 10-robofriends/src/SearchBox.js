@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SearchBox() {
+function SearchBox({ searchChange }) {
   return (
     <div>
       <input
@@ -9,6 +9,7 @@ function SearchBox() {
         name=''
         id=''
         placeholder='search robots'
+        onChange={searchChange}
       />
     </div>
   );
