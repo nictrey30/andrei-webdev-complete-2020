@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import CardList from './CardList';
 import robots from './robots';
 import SearchBox from './SearchBox';
+import './App.css';
 
 function App() {
   const [robotsList, setRobotsList] = useState(robots);
   const [searchfield, setSearchField] = useState('');
 
   function onSearchChange(e) {
-    setSearchField(e.target.value);
+    const { value } = e.target;
+    setSearchField(value);
   }
 
   const filteredRobots = robotsList.filter((robot) =>
@@ -17,7 +19,7 @@ function App() {
 
   return (
     <div className='tc'>
-      <h1>RoboFriends</h1>
+      <h1 className='f1 tracked-mega'>RoboFriends</h1>
       <SearchBox searchChange={onSearchChange} />
       <CardList robots={filteredRobots} />
     </div>
