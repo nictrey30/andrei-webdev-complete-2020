@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import CardList from './CardList';
+import CardList from '../components/CardList';
 // import Scroll from './Scroll';
-import SearchBox from './SearchBox';
+import SearchBox from '../components/SearchBox';
 import './App.css';
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className='tc'>
-      {robotsList.length === 0 ? (
+      {!robotsList.length ? (
         <h1>Loading</h1>
       ) : (
         <h1 className='f1 tracked-mega'>RoboFriends</h1>
