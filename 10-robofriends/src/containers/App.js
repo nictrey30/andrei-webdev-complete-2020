@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import CardList from '../components/CardList';
 // import Scroll from './Scroll';
 import SearchBox from '../components/SearchBox';
+import ErrorBoundry from '../components/ErrorBoundry';
 import './App.css';
 
 function App() {
@@ -40,7 +41,9 @@ function App() {
       {/* <Scroll>
         <CardList robots={filteredRobots} />
       </Scroll> */}
-      <CardList robots={filteredRobots} />
+      <ErrorBoundry>
+        <CardList robots={filteredRobots} />
+      </ErrorBoundry>
     </div>
   );
 }
