@@ -12,6 +12,8 @@ const setSearchField = (text) => {
     payload: text
   };
 };
+
+// thunk beacuse requestRobots is going to return a function, is going to provide the dispatch function that we get from the mapDispatchToProps dispath from redux to this second layer function
 const requestRobots = () => (dispatch) => {
   dispatch({ type: REQUEST_ROBOTS_PENDING });
   apiCall('https://jsonplaceholder.typicode.com/users')
