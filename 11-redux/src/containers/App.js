@@ -18,6 +18,7 @@ const mapStateToProps = (state) => {
   };
 };
 
+// dispatch is what triggers the action and the action is the objects we created in actions.js
 const mapDispatchToProps = (dispatch) => {
   return {
     onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
@@ -54,7 +55,7 @@ class App extends Component {
 }
 
 // connect is going to return another function, and it accepts two parameters: mapStateToProps, mapDispatchToProps
-// to connect the App means to tell App to subscribe to any change in the redux Store
+// to connect the App means to tell App to what changes should be interested in
 // mapStateToProps - what state should i listen to?
 // mapDispatchToProps - what dispatch aka action should i listen to?
 
