@@ -7,4 +7,4 @@ const urls = [
 
 Promise.all(urls.map((url) => fetch(url).then((response) => response.json())))
   .then((responsesArray) => responsesArray.forEach((data) => console.log(data)))
-  .catch((err) => console.log('ughhhh fix it!', err));
+  .catch((err) => console.log('oops!', err));
