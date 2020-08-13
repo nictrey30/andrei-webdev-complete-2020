@@ -37,7 +37,8 @@ class App extends Component {
       // boxes - an object that will contain the boxes with their respective coord that we receive for each face detected in the picture
       box: {},
       // route keeps track of where we are on the page
-      route: 'signin'
+      route: 'signin',
+      isSignedIn: false
     };
   }
   // using arrow functions to avoid bind
@@ -77,6 +78,11 @@ class App extends Component {
   };
 
   onRouteChange = (route) => {
+    if (route === 'signout') {
+      this.setState({ isSignedIn: false });
+    } else if (route === 'home') {
+      this.setState({ isSignedIn: true });
+    }
     this.setState({ route: route });
   };
 
@@ -84,7 +90,10 @@ class App extends Component {
     return (
       <div className='App'>
         <Particles className='particles' params={particlesOptions} />
-        <Navigation onRouteChange={this.onRouteChange} />
+        <Navigation
+          isSignedIn={this.state.isSignedIn}
+          onRouteChange={this.onRouteChange}
+        />
         {this.state.route === 'home' ? (
           <div>
             <Logo />
