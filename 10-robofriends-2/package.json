@@ -1,20 +1,18 @@
 {
-  "name": "10-robofriends",
+  "name": "10-robofriends-2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "randomcolor": "^0.6.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.3",
-    "tachyons": "^4.12.0",
-    "typescript": "^4.0.2"
+    "react-scripts": "3.4.3",
+    "tachyons": "^4.12.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=2200 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -33,6 +31,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {}
+  }
 }
