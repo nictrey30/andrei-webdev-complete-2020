@@ -10,9 +10,9 @@ import registerServiceWorker from './registerServiceWorker';
 import { searchRobots, requestRobots } from './reducers';
 import 'tachyons';
 
-// we give the createStore function the root reducer as parameter
 const logger = createLogger();
 
+// we give the createStore function the root reducer as parameter
 // combineReducers will accept in object form all the reducers
 const rootReducer = combineReducers({ searchRobots, requestRobots });
 const store = createStore(
