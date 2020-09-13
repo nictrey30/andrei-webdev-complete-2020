@@ -13,7 +13,7 @@ const setSearchField = (text) => {
   };
 };
 
-// thunk beacuse requestRobots is going to return a function, is going to provide the dispatch function that we get from the mapDispatchToProps dispath from redux to this second layer function
+// thunkMiddleware is waiting for a function, and if it sees one is gonna act upon it
 const requestRobots = () => (dispatch) => {
   dispatch({ type: REQUEST_ROBOTS_PENDING });
   apiCall('https://jsonplaceholder.typicode.com/users')

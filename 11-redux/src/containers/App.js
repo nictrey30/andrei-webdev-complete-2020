@@ -22,6 +22,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
+    // thunkMiddleware because requestRobots is going to return a function, is going to provide the dispatch function that we get from the mapDispatchToProps to this second layer function
+    // we need to pass down the dispatch to the action requestRobots, which is going to take that dispatch and return a function, on which thunkMiddleware will act upon it
     onRequestRobots: () => dispatch(requestRobots())
   };
 };
@@ -59,4 +61,5 @@ class App extends Component {
 // mapStateToProps - what state should i listen to?
 // mapDispatchToProps - what dispatch aka action should i listen to?
 
+// subscribe to any state changes in the Redux store
 export default connect(mapStateToProps, mapDispatchToProps)(App);
